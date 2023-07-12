@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        table{
+            width:70%;
+            margin:auto;
+            text-align: center;
+        }
+        thead{
+            font-weight: 800;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        table,td{
+            border:1px solid grey;
+            border-collapse: collapse;
+            padding:5px;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <td>Name</td>
+                <td>brand</td>
+                <td>price (in $)</td>
+                <td>operating system</td>
+            </tr>
+        </thead>
+        <tbody>
+            <% for(let i=0;i<data.length;i++){%>
+            <tr>
+                <td><%=  data[i].name %></td>
+                <td><%= data[i].brand %></td>
+                <td><%= data[i].price %></td>
+                <td><%= data[i].os  %></td>
+            </tr>
+            <%}%>
+        </tbody>
+    </table>
+</body>
+</html>
